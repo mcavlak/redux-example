@@ -33,7 +33,7 @@ function App() {
       MuiCardMedia: {
         styleOverrides: {
           root: {
-            padding: "1rem 1rem .25rem",
+            padding: "1rem 1rem 0",
             boxSizing: "border-box",
           }
         }
