@@ -21,6 +21,8 @@ function App() {
       MuiCard: {
         styleOverrides: {
           root: {
+            padding: "1rem 1rem .25rem",
+            boxSizing: "border-box",
             borderRadius: "1rem",
             boxShadow: "rgba(149, 157, 165, 0.15) 0px 8px 24px;",
             backgroundColor: "#fff",
