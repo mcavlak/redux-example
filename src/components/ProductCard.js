@@ -16,9 +16,12 @@ const ProductCard = ({ isLoading }) => {
                     <CardActionArea>
                         <CardMedia
                             component="img"
-                            height="250"
                             image={image}
                             alt={title}
+                            height="250"
+                            sx={{
+                                objectFit: "contain"
+                            }}
                         />
                         <CardContent>
                             <Tooltip title={title}>

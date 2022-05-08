@@ -7,10 +7,9 @@ import ProductCard from './ProductCard';
 
 const ProductList = () => {
     const dispatch = useDispatch();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const fetchProducts = async () => {
-        setIsLoading(true);
         let res = await axios
             .get("https://fakestoreapi.com/products")
             .catch((error) => console.log(error));
