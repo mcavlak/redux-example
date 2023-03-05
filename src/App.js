@@ -1,13 +1,11 @@
-import "./App.css"
+import "./App.css";
 import { useRoutes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
 import { createTheme, ThemeProvider } from "@mui/material";
 
-
 function App() {
-
   const theme = createTheme({
     palette: {
       primary: {
@@ -15,7 +13,7 @@ function App() {
       },
     },
     typography: {
-      fontFamily: 'Montserrat',
+      fontFamily: "Montserrat",
     },
     components: {
       MuiCard: {
@@ -27,32 +25,32 @@ function App() {
             "&:hover": {
               boxShadow: "rgba(44, 62, 80, .3) 0px 8px 24px;",
             },
-          }
-        }
+          },
+        },
       },
       MuiCardMedia: {
         styleOverrides: {
           root: {
             padding: "1rem 1rem 0",
             boxSizing: "border-box",
-          }
-        }
+          },
+        },
       },
       MuiButton: {
         styleOverrides: {
           root: {
             borderRadius: ".75rem",
-            padding: ".5rem 1rem"
-          }
-        }
-      }
-    }
+            padding: ".5rem 1rem",
+          },
+        },
+      },
+    },
   });
 
   let element = useRoutes([
-    { path: '/', element: <ProductList /> },
-    { path: '/product/:productId', element: <ProductDetail /> },
-    { path: '*', element: <div>Bulunamadı</div> },
+    { path: "/", element: <ProductList /> },
+    { path: "/product/:productId", element: <ProductDetail /> },
+    { path: "*", element: <div>Not found</div> },
   ]);
 
   return (
@@ -60,7 +58,7 @@ function App() {
       <Navbar />
       {element}
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;
